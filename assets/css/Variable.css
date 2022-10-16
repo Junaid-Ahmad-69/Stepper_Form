@@ -1,0 +1,24 @@
+:root {
+    --dark-red: #b84a43;
+    --dark-blue: #4654ab;
+    --light-blue: #2f3ea0;
+    --light-red: #ae342d;
+    --white: #FFFFFF;
+    --whitesmoke:#fffff7;
+    --black: #000000;
+    --caret-red :#f55252;
+    --caret-blue: #465375;
+    --white-transparent: #e0e0e033;
+    --light-grey: #D2D2D2;
+    --dark-grey: #75787D;
+    --invalid: #FFDDDD;
+    --medium-grey:#ececec;
+
+
+    /*New Sign Up Slider Variable*/
+    --main-color: #6c5ce7;
+    --secondar-color: #a29bfe;
+    --lighter-color:#e0e0e7;
+    --light-color:#b0b0c0;
+    --dark-color:#52505e;
+}

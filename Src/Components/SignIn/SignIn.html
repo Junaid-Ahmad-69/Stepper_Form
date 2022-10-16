@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="Sierra Service Foundation, Sierra Service Foundation Login,  Sierra Service Portal, Sierra Service Portal Login, Summer Youth Service Projects, Summer Youth Service Projects Login, SSP, SSP Login, SSP Portal, SSP Portal Login, Sierra Service Login">
+    <link rel="shortcut icon" href="/assets/images/fav-icon.png" type="image/x-icon">
+    <title>MySSP | Login</title>
+    <link rel="stylesheet" href="sign_in.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <!--Tailwind Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <!--Font Awesome Link-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<main id="login-portal">
+    <div class="wrapper">
+        <div class="login-portal-container custom-container flex items-center justify-center h-screen flex-col gap-20 ">
+            <div class="flex gap-2">
+                <h1 class="heading text-center active-Heading  text-4xl relative" data-array="">Welcome</h1>
+                <h1 class="text-center active-Heading  text-4xl " id="typewriter" data-array=""></h1>
+                <span class="cursor"></span>
+            </div>
+            <div class="login-portal-card flex items-center justify-between bg-white">
+
+                <!--Left Animate Image-->
+                <div class="login-portal-card-img h-full w-full">
+                    <img src="/assets/images/login/login.gif" alt="login-image">
+                </div>
+
+                <!--Right Section SignIn-->
+                <div class="login-portal-content h-full p-10">
+                    <div class="login-portal-title">
+                        <h2 class="text-xl mb-2">Login</h2>
+                        <p class="text-sm font-normal">Welcome back, please login to your account.</p>
+                    </div>
+
+                    <!--Form-->
+                    <form class="my-8">
+
+                        <input type="email" name="enterName" id="userName" placeholder="Username" required
+                               autocomplete="on"
+                               class=" block outline-0 border border-1 border-solid rounded-lg outer-style p-2 w-96 my-6"/>
+                        <input type="password" name="enterPassword" id="userPassword" required autocomplete="on"
+                               placeholder="Password"
+                               class=" block outline-0 border border-1 border-solid rounded-lg outer-style p-2 w-96 my-6"/>
+
+                        <!--Remember Me-->
+                        <div class="flex items-center justify-between">
+                            <div class="login-portal-form-group">
+                                <input type="checkbox" id="remember_me" class="hidden">
+                                <label for="remember_me" class="text-sm font-normal relative">Remember me</label>
+                            </div>
+                            <a href="../ForgetPassword/NewForgetPassword.html" class="text-sm font-normal acceptedText">
+                                Forget Password? </a>
+                        </div>
+
+                        <!--SignIn Button-->
+                        <a href="../Group_Manager/GroupManager.html">
+                            <button type="submit" value="Login"
+                                    class="button-dark flex items-center justify-center my-6 px-4 py-2 w-full rounded text-white">
+                                Login
+                                <i class="fa-solid fa-unlock-keyhole ml-2"></i>
+                            </button>
+                        </a>
+                        <hr>
+                    </form>
+
+                    <a href="../SignUp/SignUp.html">
+                        <button class="button-dark flex items-center justify-center text-center py-2 px-4 text-white w-full">
+                            Register
+                            <i class="fa-solid fa-user-plus ml-2"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="Sign_in.js"></script>
+</body>
+</html>

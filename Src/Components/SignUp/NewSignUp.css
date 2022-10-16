@@ -1,0 +1,206 @@
+@import "/assets/css/Variable.css";
+
+.login-register-dropdown.active .login-register-select > i {
+    transform: rotate(180deg);
+}
+
+.login-register-dropdown.active {
+    border: 1px solid var(--dark-blue);
+    z-index: 2;
+}
+
+.login-register-select i {
+    color: var(--dark-blue);
+}
+
+.login-register-dropdown-menu li:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+
+.form-box {
+    display: flex;
+    margin: 5em 0;
+    border: 8px solid var(--lighter-color);
+    border-right: 15px;
+    background: var(--medium-grey);
+}
+
+.form-box .progress {
+    position: relative;
+    padding: 1em;
+}
+
+.logo {
+    font-size: 1.75em;
+    font-weight: 800;
+    color: var(--dark-color);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.progress ul.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2em;
+}
+
+.progress ul.progress-step li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.progress ul.progress-step li > span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: var(--lighter-color);
+    z-index: 1;
+}
+
+.progress ul.progress-step li.active > span {
+    color: white;
+    background-color: var(--main-color);
+    border: 4px solid var(--secondar-color);
+    z-index: 1;
+}
+
+.progress ul.progress-step li p span {
+    font-size: 12px;
+    color: var(--light-color);
+}
+
+.form-box .progress {
+    flex: 1 0 35%;
+    min-width: 300px;
+    padding: 3em;
+}
+
+.progress ul.progress-step li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 2px;
+    height: 65px;
+    background-color: var(--lighter-color);
+}
+
+.form-box form {
+    width: 100%;
+    padding: 3em;
+    background-color: white;
+    border-radius: 30px 30px 15px 15px;
+}
+
+form > div {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form > div p {
+    color: var(--lighter-color);
+    margin-bottom: 2em;
+}
+
+form > div .valid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+form :where(.valid, select) {
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: var(--secondar-color);
+    border: 1px solid var(--lighter-color);
+    background-color: transparent;
+}
+
+form label {
+    font-size: 12px;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+/*.form-two, .form-three, .form-four, .form-five {*/
+/*    display: none;*/
+/*}*/
+
+form > div:not(.group-btn) {
+    display: none;
+    animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    --webanimation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        --webkit-transform: translateY(10%);
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        --webkit-transform: translateY(0);
+    }
+}
+
+form > div.active {
+    display: block;
+}
+
+.group-btn {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5em;
+    margin-top: 2em;
+}
+
+.group-btn [class*="btn-"] {
+    background-color: var(--main-color);
+    color: white;
+    padding: .5em 1em;
+    border: 4px solid var(--secondar-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color .3s, border-color .3s ease-out;
+}
+
+.group-btn [class*="btn-"]:disabled {
+    background-color: var(--light-color);
+    border-color: var(--lighter-color);
+}
+
+.group-btn [class*="btn-"]:hover:not(:disabled) {
+    background-color: var(--dark-color);
+    border-color: var(--light-color);
+}
+
+.group-btn .btn-submit,
+.form-five.active ~ .group-btn .btn-next {
+    display: none;
+}
+
+.form-five.active ~ .group-btn .btn-submit {
+    display: block;
+}
+
+.form-five.active ~ .group-btn {
+    justify-content: space-between;
+}

@@ -1,0 +1,262 @@
+@import "/assets/css/Variable.css";
+
+.aside-scroller::-webkit-scrollbar {
+    width: 6px;
+}
+
+.aside-scroller::-webkit-scrollbar-track {
+    background-color: hsla(0, 0%, 100%, .5) !important;
+    margin: .5rem 0 2rem 0;
+    border-radius: 20px;
+}
+
+.aside-scroller::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 100%, .5) !important;
+    border-radius: 20px;
+}
+
+/*Filter DropDown Scroll Bar*/
+.filter-dropdown-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.filter-dropdown-menu::-webkit-scrollbar-track {
+    margin-block: 2px;
+    background: #99c6ec !important;
+    border-radius: 20px;
+}
+
+.filter-dropdown-menu::-webkit-scrollbar-thumb {
+    background: var(--light-blue) !important;
+    border-radius: 20px;
+}
+
+.scroller-hv {
+    height: 91.5%;
+}
+
+.aside-nav-shadow {
+    box-shadow: 6px 0 20px 0 rgb(25 42 70 / 35%);
+}
+
+.main {
+    background-color: var(--whitesmoke);
+}
+
+/*Aside Navbar*/
+.bg-aside {
+    background: linear-gradient(135deg, var(--light-blue), var(--light-red));
+    opacity: 1;
+}
+
+.bg-aside::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("/assets/images/aside/aside-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+/*Navbar Links Hover Effects*/
+.menu-links a:before {
+    content: "";
+    display: block;
+}
+
+.active-menu-links {
+    background-color: var(--white-transparent);
+    border-right: 3px solid var(--dark-red);
+}
+
+.menu-links a:before {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: all .2s ease-out;
+    border-right: 3px solid var(--dark-red);
+}
+
+.menu-links a:hover:before {
+    opacity: 1;
+    right: 0;
+}
+
+/*Accordion Background Bg*/
+.accordion-item .accordion-button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: white;
+    box-shadow: none;
+
+}
+
+.accordion-item .accordion-button:after {
+    background-image: url("../../../assets/images/aside/arrow.png");
+}
+
+/*Filter Drop Down*/
+.filter-dropdown-menu li:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.filter-dropdown.active .filter-dropdown-select > i {
+    transform: rotate(180deg);
+}
+
+.filter-dropdown-select i {
+    color: var(--dark-blue);
+}
+
+/*Filter SideBar*/
+.filter-sidebar {
+    width: 350px;
+    top: 6%;
+    right: -350px;
+    background: snow;
+}
+
+#filter_button:hover, #cancel_button:hover {
+    font-size: 22px;
+}
+
+label #cancel_button {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#filter_check:checked ~ .filter-sidebar {
+    right: 0;
+}
+
+#filter_check:checked ~ label #filter_button {
+    margin-right: 350px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#filter_check:checked ~ label #cancel_button {
+    margin-right: 350px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*Check Mark Aside*/
+.ChurchFlag label:before {
+    background-color: transparent;
+    border: 1px solid var(--dark-blue);
+    border-radius: 2px;
+    content: '';
+    display: inline-block;
+    margin: -1px 10px 0 0;
+    padding: 6px;
+    position: relative;
+    vertical-align: middle;
+    -webkit-appearance: none;
+}
+
+.ChurchFlag input:checked + label:after {
+    border: solid var(--dark-blue);
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    transform: rotate(45deg);
+    width: 6px;
+}
+
+.nav-pills .nav-link.active {
+    border: none;
+    outline: none;
+    background: linear-gradient(270deg, var(--dark-blue), var(--dark-red));
+    box-shadow: 0 0 8px rgb(0 0 0 / 18%), 0 8px 16px rgb(0 0 0 / 36%);
+    transition: all linear 0.3s;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.nav-pills .nav-link.active:hover {
+    box-shadow: 0 2px 7px rgb(0 0 0 / 28%);
+}
+
+.nav-pills .nav-link:hover {
+    background: linear-gradient(270deg, var(--dark-blue), var(--dark-red));
+    color: var(--white);
+    opacity: 0.8;
+    transition: all linear 0.2s;
+
+}
+
+/*Table Css*/
+table tbody {
+    background: snow;
+}
+
+tr:nth-child(even) {
+    background-color: var(--medium-grey);
+}
+
+table tr {
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: left;
+}
+
+/*Pagination*/
+.pagination ul li{
+    color: var(--dark-blue);
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.pagination ul li.numb{
+    list-style: none;
+    height: 45px;
+    width: 45px;
+    margin: 0 3px;
+    line-height: 45px;
+    border-radius: 50%;
+}
+.pagination ul li.numb.first{
+    margin: 0 3px 0 -5px;
+}
+.pagination ul li.numb.last{
+    margin: 0 -5px 0 3px;
+}
+.pagination ul li.dots{
+    font-size: 16px;
+    cursor: default;
+}
+.pagination ul li.btn{
+    padding: 0 20px;
+    border-radius: 50px;
+}
+.pagination li.active,
+.pagination ul li.numb:hover,
+.pagination ul li:first-child:hover,
+.pagination ul li:last-child:hover{
+    color: var(--white);
+    background: linear-gradient(270deg, var(--dark-blue), var(--dark-red));
+    opacity: 0.8;
+}

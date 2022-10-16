@@ -1,0 +1,77 @@
+@import "/assets/css/Variable.css";
+
+.aside-nav-shadow {
+    box-shadow: 6px 0 20px 0 rgb(25 42 70 / 35%);
+}
+
+/*::-webkit-scrollbar {*/
+/*    width: 5px;*/
+/*}*/
+
+/*::-webkit-scrollbar-track {*/
+/*    background: transparent !important;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #bbbbbb;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+.main {
+    background-color: var(--whitesmoke);
+}
+
+.bg-aside {
+    background: linear-gradient(135deg, var(--light-blue), var(--light-red));
+    opacity: 1;
+}
+
+.bg-aside::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("/assets/images/aside/aside-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+
+.welcome_text::before {
+    content: "";
+    position: absolute;
+    top: 21%;
+    width: 9rem;
+    height: 2px;
+    background-color: var(--light-red);
+}
+
+/*Navbar Links Hover Effects*/
+.menu-links a:before {
+    content: "";
+    display: block;
+}
+
+.active-menu-links {
+    background-color: var(--white-transparent);
+    border-right: 3px solid var(--dark-red);
+}
+
+.menu-links a:before {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-transparent);
+    z-index: -1;
+    opacity: 0;
+    transition: all .2s ease-out;
+    border-right: 3px solid var(--dark-red);
+}
+
+.menu-links a:hover:before {
+    opacity: 1;
+    right: 0;
+}

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="Sierra Service Foundation, Sierra Service Portal, Summer Youth Service Projects, SSP, SSP Portal, Sierra Service Register">
+    <link rel="shortcut icon" href="/assets/images/fav-icon.png" type="image/x-icon">
+    <title>MySSP | Register New User </title>
+    <!--Tailwind Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="sign_up.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <!--Font Awesome Cdn-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+<body>
+<!--Header -->
+<header id="login-register">
+    <div class="login-register-container nav-bg nav-shadow ">
+        <div class="custom-container">
+            <div class="flex items-center justify-between h-20">
+                <a href="../SignIn/SignIn.html">
+                    <img src="/assets/images/MySsp-logo.png" alt="mySsp-logo" class="w-16">
+                </a>
+                <nav>
+                    <ul class="flex items-center gap-12">
+                        <li><a href="../SignIn/SignIn.html"
+                               class="text-sm px-6  py-2.5 font-normal text-white button-dark ">
+                            Sign in</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!--Main Content-->
+<main id="login-register-main">
+    <div class="custom-container">
+        <!--Heading-->
+        <div class="login-register-container">
+            <h1 class="my-8 text-center text-4xl activeText drop-shadow-md">New Login User</h1>
+        </div>
+        <section>
+            <h2 class="text-base font-medium">Request a Login to SSP's Group Portal</h2>
+            <p class="text-sm mt-4">The MySSP system allows leaders to register an individual or group, make
+                payments, enter roster information, download important documents and more! It is intended to make
+                life easier for you. If you have any question about any of this or would like to talk to someone,
+                please call <a href="tel:916-488-6441." class="active-Heading ml-1"> <strong>916-488-6441.</strong></a>
+            </p>
+        </section>
+
+
+        <form class="w-full login-register-form my-12" id="login-register-form">
+
+            <!--First Form-->
+            <fieldset class="login-register-form-page ">
+
+                <!--Name Section -->
+                <div class="flex items-center gap-6 my-4">
+                    <div class="w-full">
+                        <label class="text-sm font-medium">First Name </label>
+                        <input type="text" name="first-name" id="firstName"
+                               class="block valid  focus:shadow-lg w-full outline-0 border border-1 border-slate-300 border-solid rounded-lg outer-style p-3 my-3"
+                               onkeyup=checkValidationHandler("firstName");>
+                    </div>
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Last Name </label>
+                        <input type="text" name="last-name" id="lastName"
+                               class="block  valid focus:shadow-lg w-full outline-0 border border-1 border-solid  border-slate-300 rounded-lg outer-style p-3 my-3"
+                               onkeyup=checkValidationHandler("lastName");>
+                    </div>
+                </div>
+
+                <!--Email  Section -->
+                <div class="flex items-center gap-6 my-4 w-full">
+                    <!--Email-->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Email</label>
+                        <input type="email" name="first-name" id="register-email"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-email");>
+                    </div>
+                    <!--Title DropDown-->
+                    <div>
+                        <span class="text-sm font-medium">Title or Role</span>
+                        <div class="login-register-dropdown inline-block bg-white relative text-left h-full transition-all w-80 linear duration-300 border border-1 border-slate-300 my-3 rounded-lg hover:drop-shadow-md">
+                            <div class="login-register-select cursor-pointer block p-3">
+                                <input type="text" placeholder="Title or Role" id="Title-or-Role" class="border-0 "
+                                       onchange=changeHandler("Title-or-Role");>
+                                <i class="fa-solid fa-chevron-down text-sm cursor-pointer float-right transition-all ease-in-out duration-500"></i>
+                            </div>
+                            <input type="hidden">
+                            <ul class="login-register-dropdown-menu absolute left-0 hidden w-full bg-white mt-0.5 list-none border border-1 border-solid border-slate-300 rounded-lg z-10"
+                                id="login-register-dropdown-menu">
+                                <li value="parent" id="parent"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-t-lg">
+                                    Parent
+                                </li>
+                                <li id="volunteer" value="Volunteer"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm">
+                                    Volunteer
+                                </li>
+                                <li id="Pastor" value="Pastor"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm">
+                                    Pastor
+                                </li>
+                                <li id="other" value="Other"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-b-lg">
+                                    Other
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Address  Section -->
+                <div class="flex items-center gap-6 my-4 w-full">
+                    <!--Address 1-->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Address 1</label>
+                        <input type="text" name="first-name" id="register-address-1"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-address-1");>
+                    </div>
+                    <!--Address 2-->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Address 2</label>
+                        <input type="text" name="first-name" id="register-address-2"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-address-2");>
+                    </div>
+                </div>
+
+                <!--City and Zip Filed -->
+                <div class="flex items-center gap-6 my-4 w-full">
+                    <!--City -->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">City</label>
+                        <input type="text" name="first-name" id="register-city"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-city");>
+                    </div>
+                    <!--Zip code-->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Zip (5 digit)</label>
+                        <input type="number" name="first-name" id="register-zip" maxlength="5"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               oninput="javascript: if (this.value > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                               onkeyup=checkValidationHandler("register-zip");>
+                    </div>
+                    <!--Sate Drop Down-->
+                    <div>
+                        <span class="text-sm font-medium">State</span>
+                        <div class="login-register-dropdown inline-block bg-white relative text-left h-full transition-all w-80  linear duration-300 border border-1 border-slate-300 my-3 rounded-lg hover:drop-shadow-md ">
+                            <div class="login-register-select cursor-pointer block p-3">
+                                <input type="text" placeholder="State" class="border-0">
+                                <i class="fa-solid fa-chevron-down text-sm cursor-pointer float-right transition-all ease-in-out duration-500"></i>
+                            </div>
+                            <input type="hidden">
+                            <ul class=" h-56 overflow-scroll overflow-x-clip login-register-dropdown-menu absolute left-0 hidden w-full bg-white mt-0.5 list-none border border-1 border-solid border-slate-300 rounded-lg z-10"
+                                id="login-register-dropdown-state"
+                                onclick=checkValidationDropDown("login-register-dropdown-state");>
+                                <li id="Al"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-t-lg">
+                                    Al
+                                </li>
+                                <li id="Ak"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    Ak
+                                </li>
+                                <li id="AZ"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    AZ
+                                </li>
+                                <li id="AR"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    AR
+                                </li>
+                                <li id="CA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    CA
+                                </li>
+                                <li id="CO"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    CO
+                                </li>
+                                <li id="CT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    CT
+                                </li>
+                                <li id="DE"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    DE
+                                </li>
+                                <li id="DC"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    DC
+                                </li>
+                                <li id="FL"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    FL
+                                </li>
+                                <li id="GA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    GA
+                                </li>
+                                <li id="HI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    HI
+                                </li>
+                                <li id="ID"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    ID
+                                </li>
+                                <li id="IL"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    IL
+                                </li>
+                                <li id="IN"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    IN
+                                </li>
+                                <li id="IA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    IA
+                                </li>
+                                <li id="KS"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    KS
+                                </li>
+                                <li id="KY"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    KY
+                                </li>
+                                <li id="LA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    LA
+                                </li>
+                                <li id="ME"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    ME
+                                </li>
+                                <li id="MD"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MD
+                                </li>
+                                <li id="MA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MA
+                                </li>
+                                <li id="MI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MI
+                                </li>
+                                <li id="MN"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MN
+                                </li>
+                                <li id="MS"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MS
+                                </li>
+                                <li id="MO"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MO
+                                </li>
+                                <li id="MT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MT
+                                </li>
+                                <li id="NE"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NE
+                                </li>
+                                <li id="NV"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NV
+                                </li>
+                                <li id="NH"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NH
+                                </li>
+                                <li id="NJ"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NJ
+                                </li>
+                                <li id="NM"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NM
+                                </li>
+                                <li id="NY"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NY
+                                </li>
+                                <li id="NC"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NC
+                                </li>
+                                <li id="ND"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    ND
+                                </li>
+                                <li id="OH"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    OH
+                                </li>
+                                <li id="OK"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    OK
+                                </li>
+                                <li id="OR"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    OR
+                                </li>
+                                <li id="PA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    PA
+                                </li>
+                                <li id="RI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    RI
+                                </li>
+                                <li id="SC"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    SC
+                                </li>
+                                <li id="SD"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    SD
+                                </li>
+                                <li id="TN"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    TN
+                                </li>
+                                <li id="TX"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    TX
+                                </li>
+                                <li id="UT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    UT
+                                </li>
+                                <li id="VT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    VT
+                                </li>
+                                <li id="VA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    VA
+                                </li>
+                                <li id="WA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    WA
+                                </li>
+                                <li id="WV"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    WV
+                                </li>
+                                <li id="WI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    WI
+                                </li>
+                                <li id="WY"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-b-lg">
+                                    WY
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Primary Phone Number-->
+                <div class="flex items-center gap-6 my-4 w-full">
+                    <!--Primary Cell No-->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Primary Cell No (10 digits)</label>
+                        <input type="number" name="first-name" id="register-primaryNo" maxlength="10"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               oninput="javascript: if (this.value > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                               onkeyup=checkValidationHandler("register-primaryNo");>
+                    </div>
+                    <!--Cell No Type-->
+                    <div>
+                        <span class="text-sm font-medium">Cell No Type</span>
+                        <div class="login-register-dropdown inline-block bg-white relative text-left h-full transition-all w-80 linear duration-300 border border-1 border-slate-300 my-3 rounded-lg hover:drop-shadow-md ">
+                            <div class="login-register-select cursor-pointer block p-3">
+                                <input type="text" placeholder="Mobile" id="CellNoType" class="border-0">
+                                <i class="fa-solid fa-chevron-down text-sm cursor-pointer float-right transition-all ease-in-out duration-500"></i>
+                            </div>
+                            <input type="hidden">
+                            <ul class="login-register-dropdown-menu absolute left-0 hidden w-full bg-white mt-0.5 list-none border border-1 border-solid border-slate-300 rounded-lg z-10 ">
+                                <li id="Mobile-primary"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-t-lg ">
+                                    Mobile
+                                </li>
+                                <li id="Home-primary"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    Home
+                                </li>
+                                <li id="Work-primary"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-b-lg">
+                                    Work
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--Secondary Cell No-->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Alternative Cell No (10 digits)</label>
+                        <input type="number" name="first-name" id="register-secondaryNo" maxlength="10"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               oninput="javascript: if (this.value > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                               onkeyup=checkValidationHandler("register-secondaryNo");>
+                    </div>
+                    <!--Alter Drop Down Cell-->
+                    <div>
+                        <span class="text-sm font-medium">Alt Cell No Type</span>
+                        <div class="login-register-dropdown inline-block bg-white relative text-left h-full transition-all w-80  linear duration-300 border border-1 border-slate-300 my-3 rounded-lg hover:drop-shadow-md ">
+                            <div class="login-register-select cursor-pointer block p-3">
+                                <input type="text" placeholder="Home" id="AltCellNo" class="border-0">
+                                <i class="fa-solid fa-chevron-down text-sm cursor-pointer float-right transition-all ease-in-out duration-500"></i>
+                            </div>
+                            <input type="hidden">
+                            <ul class=" login-register-dropdown-menu absolute left-0 hidden w-full bg-white mt-0.5 list-none border border-1 border-solid border-slate-300 rounded-lg z-10 ">
+                                <li id="Mobile-secondary"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-t-lg">
+                                    Mobile
+                                </li>
+                                <li id="Home-secondary"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    Home
+                                </li>
+                                <li id="Work-secondary"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-b-lg">
+                                    Work
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="login-register-form-page">
+                <h2 class="text-base font-medium my-6">Please Identify Your Group</h2>
+                <!--Name Section -->
+                <div class="flex items-center gap-6 my-4">
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Group Name</label>
+                        <input type="email" name="first-name" id="register-group-email"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-group-email");>
+                    </div>
+
+                    <div class="">
+                        <span class="choose text-sm font-medium">Group Type</span>
+                        <div class="login-register-dropdown inline-block bg-white relative text-left h-full transition-all w-80 linear duration-300 border border-1 border-slate-300 my-3 rounded-lg hover:drop-shadow-md">
+                            <div class="login-register-select cursor-pointer block p-3">
+                                <input type="text" placeholder="Family" id="GroupFamily" class="border-0">
+                                <i class="fa-solid fa-chevron-down text-sm cursor-pointer float-right transition-all ease-in-out duration-500 "></i>
+                            </div>
+                            <input type="hidden">
+                            <ul class="login-register-dropdown-menu absolute left-0 hidden w-full bg-white mt-0.5 list-none border border-1 border-solid border-slate-300 rounded-lg z-10">
+                                <li id="Family"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-t-lg">
+                                    Family
+                                </li>
+                                <li id="Club"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm">
+                                    Club
+                                </li>
+                                <li id="Church"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm">
+                                    Church
+                                </li>
+                                <li id="Corporate"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    Corporate
+                                </li>
+
+                                <li id="School"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm">
+                                    School
+                                </li>
+
+                                <li id="Other-Group"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-b-lg">
+                                    Other-Group
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Address  Section -->
+                <div class="flex items-center gap-6 my-4 w-full">
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Address 1</label>
+                        <input type="text" name="first-name" id="register-group-address-1"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-group-address-1");>
+                    </div>
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Address 2</label>
+                        <input type="text" name="first-name" id="register-group-address-2"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-group-address-2");>
+                    </div>
+                </div>
+
+                <!--City and Zip Filed -->
+                <div class="flex items-center gap-6 my-4 w-full">
+                    <div class="w-full">
+                        <label class="text-sm font-medium">City</label>
+                        <input type="text" name="first-name" id="register-group-city"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-group-city");>
+                    </div>
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Zip (5 digit)</label>
+                        <input type="number" name="first-name" id="register-group-zip" maxlength="5"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               oninput="javascript: if (this.value > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                               onkeyup=checkValidationHandler("register-group-zip");>
+                    </div>
+                    <div>
+                        <span class="text-sm font-medium">State</span>
+                        <div class="login-register-dropdown inline-block bg-white relative text-left h-full transition-all w-80  linear duration-300 border border-1 border-slate-300 my-3 rounded-lg hover:drop-shadow-md ">
+                            <div class="login-register-select cursor-pointer block p-3">
+                                <input type="text" placeholder="State" id="GroupState" class="border-0">
+                                <i class="fa-solid fa-chevron-down text-sm cursor-pointer float-right transition-all ease-in-out duration-500"></i>
+                            </div>
+                            <input type="hidden">
+                            <ul class="h-56 overflow-scroll overflow-x-clip login-register-dropdown-menu absolute left-0 hidden w-full bg-white mt-0.5 list-none border border-1 border-solid border-slate-300 rounded-lg z-10 ">
+                                <li id="Al"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-t-lg">
+                                    Al
+                                </li>
+                                <li id="Ak"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    Ak
+                                </li>
+                                <li id="AZ"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    AZ
+                                </li>
+                                <li id="AR"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    AR
+                                </li>
+                                <li id="CA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    CA
+                                </li>
+                                <li id="CO"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    CO
+                                </li>
+                                <li id="CT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    CT
+                                </li>
+                                <li id="DE"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    DE
+                                </li>
+                                <li id="DC"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    DC
+                                </li>
+                                <li id="Fl"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    FL
+                                </li>
+                                <li id="GA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    GA
+                                </li>
+                                <li id="HI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    HI
+                                </li>
+                                <li id="ID"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    ID
+                                </li>
+                                <li id="IL"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    IL
+                                </li>
+                                <li id="IN"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    IN
+                                </li>
+                                <li id="IA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    IA
+                                </li>
+                                <li id="KS"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    KS
+                                </li>
+                                <li id="KY"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    KY
+                                </li>
+                                <li id="LA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    LA
+                                </li>
+                                <li id="ME"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    ME
+                                </li>
+                                <li id="MD"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MD
+                                </li>
+                                <li id="MA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MA
+                                </li>
+                                <li id="MI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MI
+                                </li>
+                                <li id="MN"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MN
+                                </li>
+                                <li id="MS"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MS
+                                </li>
+                                <li id="MO"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MO
+                                </li>
+                                <li id="MT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    MT
+                                </li>
+                                <li id="NE"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NE
+                                </li>
+                                <li id="NV"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NV
+                                </li>
+                                <li id="NH"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NH
+                                </li>
+                                <li id="NJ"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NJ
+                                </li>
+                                <li id="NM"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NM
+                                </li>
+                                <li id="NY"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NY
+                                </li>
+                                <li id="NC"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    NC
+                                </li>
+                                <li id="ND"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    ND
+                                </li>
+                                <li id="OH"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    OH
+                                </li>
+                                <li id="OK"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    OK
+                                </li>
+                                <li id="OR"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    OR
+                                </li>
+                                <li id="PA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    PA
+                                </li>
+                                <li id="RI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    RI
+                                </li>
+                                <li id="SC"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    SC
+                                </li>
+                                <li id="SD"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    SD
+                                </li>
+                                <li id="TN"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    TN
+                                </li>
+                                <li id="TX"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    TX
+                                </li>
+                                <li id="UT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    UT
+                                </li>
+                                <li id="VT"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    VT
+                                </li>
+                                <li id="VA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    VA
+                                </li>
+                                <li id="WA"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    WA
+                                </li>
+                                <li id="WV"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    WV
+                                </li>
+                                <li id="WI"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm ">
+                                    WI
+                                </li>
+                                <li id="WY"
+                                    class="p-2 transition-all ease-in-out duration-200 cursor-pointer text-sm hover:rounded-b-lg">
+                                    WY
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Primary Phone Number-->
+                <div class="flex items-center gap-6 my-4 w-full">
+                    <!--Primary Cell No-->
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Primary Cell No (10 digits)</label>
+                        <input type="number" name="first-name" id="register-group-primaryNo" maxlength="10"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               oninput="javascript: if (this.value > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                               onkeyup=checkValidationHandler("register-group-primaryNo");>
+                    </div>
+                    <div class="w-full">
+                        <label class="text-sm font-medium">Fax Number</label>
+                        <input type="email" name="first-name" id="register-group-fax"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-group-fax");>
+                    </div>
+                </div>
+
+                <!--Hear About-->
+                <div class="my-4 w-full">
+                    <div class="w-full">
+                        <label class="text-sm font-medium">How did you hear about SSP?</label>
+                        <input type="text" name="first-name" id="register-group-hear"
+                               class="block focus:shadow-lg outline-0 border border-1 border-solid border-slate-300 rounded-lg outer-style p-3 my-3 w-full"
+                               onkeyup=checkValidationHandler("register-group-hear");>
+                    </div>
+                </div>
+                <p class="text-sm">This application is intended for the sole use of SSP employees and client
+                    groups. Any other use is prohibited.</p>
+            </fieldset>
+
+            <!--Button Next and Submit-->
+            <div class="flex items-center gap-12 justify-end my-8">
+                <button type="button" id="prevBtn" class="px-6 py-2.5 button-dark text-sm text-white"
+                        onclick="nextPrev(-1)">Previous
+                </button>
+                <button type="button" id="nextBtn" class="px-8 py-2.5 button-dark text-sm text-white"
+                        onclick="nextPrev(1)"> Next
+                </button>
+
+            </div>
+        </form>
+    </div>
+</main>
+
+<!--footer Section-->
+<footer id="footer" class="relative mt-14 nav-bg w-full py-2 ">
+    <div class="custom-container">
+        <section class="footer-contact">
+            <h2 class="text-2xl text-white my-4 ">Contact Us</h2>
+            <p class="text-xs text-white my-2 ">Do you have a project you would like us to work on? Or perhaps a few
+                question? </p>
+            <p class="text-xs text-white my-2">Contact us and will be more than happy to assist you.</p>
+        </section>
+        <div class="grid grid-cols-3 gap-12 my-8">
+
+            <!--Our Office-->
+            <div class="text-white">
+                <h3 class="text-xl footer-bar relative">Our Office</h3>
+                <div class="flex items-center gap-3 text-sm mt-8 mb-4">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:916-488-6441">916-488-6441</a>
+                </div>
+                <div class="flex items-center gap-3 text-sm my-4">
+                    <i class="fa-regular fa-envelope"></i>
+                    <a href="mailto:sierraservice@gmail.com">Email SSP </a>
+                </div>
+            </div>
+
+            <!--Company-->
+            <div class="text-white">
+                <h3 class="text-xl footer-bar relative">Company</h3>
+                <div class=" text-sm mt-8 mb-4">
+                    <a href="../Footer-NavBar/About.html" class="block my-4">About</a>
+                    <a href="../Footer-NavBar/Contact.html" class="block my-4">Contact</a>
+
+                </div>
+            </div>
+
+            <!--Keep Connected-->
+            <div class="text-white">
+                <h3 class="text-xl footer-bar relative">Keep Connected</h3>
+                <div class="text-sm  mt-6 my-4">
+                    <div class="flex items-center gap-6 my-4">
+                        <button class="social-icons cursor-pointer border border-white border-solid rounded-full h-6 w-6">
+                            <i class="fa-brands fa-twitter "></i></button>
+                        <a class="cursor-pointer">Twitter</a>
+                    </div>
+                    <div class="flex items-center gap-6 my-4">
+                        <button class="social-icons cursor-pointer border border-white border-solid rounded-full h-6 w-6">
+                            <i class="fa-brands fa-facebook-f"></i></button>
+                        <a class="cursor-pointer"> Facebook</a></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<!--Js Link & JQuery-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./sign_up.js"></script>
+
+</body>
+</html>

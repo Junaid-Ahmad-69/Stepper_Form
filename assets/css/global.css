@@ -1,0 +1,136 @@
+/*All File Padding and Margin Set */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Montserrat, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    outline: none;
+    list-style: none;
+}
+
+/*Global Scroller Bar Set */
+/*Scroll Design*/
+::-webkit-scrollbar {
+    width: 4px;
+    z-index: -1;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 7px;
+    margin-block: 3.58rem 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark-blue);
+    border-radius: 7px;
+}
+
+/*Global Custom Container*/
+.custom-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+@media (min-width: 2560px) {
+    .custom-container {
+        max-width: 2560px;
+    }
+}
+
+/*Global Navbar Gradient*/
+.nav-bg {
+    background: linear-gradient(270deg, var(--dark-blue), var(--dark-red));
+}
+
+/*Global Nav Shadow*/
+.nav-shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+}
+
+/*Global Page title Gradient*/
+.active-Heading {
+    background: linear-gradient(135deg, var(--light-blue), var(--light-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Active Text Dark*/
+.activeText {
+    color: var(--dark-red);
+}
+
+.active {
+    color: var(--dark-blue);
+}
+
+/*Active Text Light*/
+.acceptedText {
+    color: var(--dark-red);
+}
+
+.acceptedText:hover {
+    color: var(--dark-blue);
+}
+
+/*Border Outer Input Focus*/
+.outer-style:focus {
+    border: 1px solid var(--dark-blue);
+}
+
+.outer-style::placeholder {
+    color: var(--light-grey);
+}
+
+.activeText-bg {
+    background: var(--dark-blue);
+    color: var(--white);
+}
+
+/*Global button*/
+.button-dark {
+    border: none;
+    outline: none;
+    background: linear-gradient(45deg, var(--caret-blue), var(--caret-red)) !important;
+    box-shadow: 0 0 8px rgb(0 0 0 / 18%), 0 8px 16px rgb(0 0 0 / 36%);
+    transition: all linear 0.3s;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+.button-dark:hover {
+    box-shadow: 0 2px 7px rgb(0 0 0 / 28%);
+}
+
+/*Global button*/
+.button-light {
+    border: none;
+    outline: none;
+    background: linear-gradient(270deg, var(--dark-blue), var(--dark-red)) !important;
+    box-shadow: 0 0 8px rgb(0 0 0 / 18%), 0 8px 16px rgb(0 0 0 / 36%);
+    transition: all linear 0.3s;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.button-light:hover {
+    box-shadow: 0 2px 7px rgb(0 0 0 / 28%);
+    /*opacity: 1;*/
+}
+
+.dropdown.active .select > i {
+    transform: rotate(180deg);
+    color: var(--dark-red);
+}
+
+/*Input number arrow None*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+

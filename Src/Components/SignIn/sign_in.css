@@ -1,0 +1,71 @@
+@import "/assets/css/Variable.css";
+
+
+#login-portal .wrapper{
+    background-image: linear-gradient(43deg, hsla(0, 0%, 41.2%, .02), hsla(0, 0%, 41.2%, .02) 62%, hsla(0, 0%, 89%, .02) 0, hsla(0, 0%, 89%, .02) 69%, rgba(24, 24, 24, .02) 0, rgba(24, 24, 24, .02) 80%, rgba(13, 13, 13, .02) 0, rgba(13, 13, 13, .02) 82%, rgba(13, 13, 13, .02) 0, rgba(13, 13, 13, .02)), linear-gradient(31deg, hsla(0, 0%, 60.8%, .02), hsla(0, 0%, 60.8%, .02) 29%, hsla(0, 0%, 64.3%, .02) 0, hsla(0, 0%, 64.3%, .02) 41%, hsla(0, 0%, 78.4%, .02) 0, hsla(0, 0%, 78.4%, .02) 74%, hsla(0, 0%, 89.8%, .02) 0, hsla(0, 0%, 89.8%, .02) 79%, rgba(15, 15, 15, .02) 0, rgba(15, 15, 15, .02)), linear-gradient(319deg, rgba(39, 39, 39, .02), rgba(39, 39, 39, .02) 17%, rgba(49, 49, 49, .02) 0, rgba(49, 49, 49, .02) 25%, rgba(59, 59, 59, .02) 0, rgba(59, 59, 59, .02) 32%, hsla(0, 0%, 76.1%, .02) 0, hsla(0, 0%, 76.1%, .02) 46%, hsla(0, 0%, 86.3%, .02) 0, hsla(0, 0%, 86.3%, .02)), linear-gradient(113deg, hsla(0, 0%, 73.7%, .02), hsla(0, 0%, 73.7%, .02) 15%, hsla(0, 0%, 87.5%, .02) 0, hsla(0, 0%, 87.5%, .02) 46%, rgba(21, 21, 21, .02) 0, rgba(21, 21, 21, .02) 88%, rgba(93, 93, 93, .02) 0, rgba(93, 93, 93, .02) 94%, hsla(0, 0%, 51%, .02) 0, hsla(0, 0%, 51%, .02)), linear-gradient(29deg, hsla(0, 0%, 52.5%, .02), hsla(0, 0%, 52.5%, .02) 27%, hsla(0, 0%, 71%, .02) 0, hsla(0, 0%, 71%, .02) 41%, rgba(81, 81, 81, .02) 0, rgba(81, 81, 81, .02) 46%, hsla(0, 0%, 99.2%, .02) 0, hsla(0, 0%, 99.2%, .02) 58%, rgba(74, 74, 74, .02) 0, rgba(74, 74, 74, .02)), linear-gradient(90deg, #e5e5e5, #e4e4e4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+/*SignIn Card*/
+#login-portal .login-portal-card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*Input Fields*/
+input[type="password"], input[type="email"] {
+    border: 1px solid var(--light-grey);
+    color: var(--dark-grey);
+}
+
+/*Check Box Css Start*/
+#login-portal .login-portal-form-group label:before {
+    background-color: transparent;
+    border: 1px solid var(--dark-red);
+    border-radius: 2px;
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    padding: 7px;
+    position: relative;
+    vertical-align: middle;
+    -webkit-appearance: none;
+}
+
+#login-portal .login-portal-form-group input:checked + label:after {
+    border: solid var(--dark-red);
+    border-width: 0 2px 2px 0;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    transform: rotate(45deg);
+    width: 6px;
+}
+
+/*Check Box Css End*/
+
+/*Heading Bottom Line*/
+.heading:before {
+    background-color: var(--dark-blue);
+    bottom: -25%;
+    content: "";
+    height: 3px;
+    position: absolute;
+    width: 180px;
+}
+
+.login-portal-card-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cursor {
+    border-left: 4px solid var(--dark-blue);
+}

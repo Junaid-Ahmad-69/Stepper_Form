@@ -1,0 +1,59 @@
+@import "/assets/css/Variable.css";
+
+.login-register-dropdown.active .login-register-select > i {
+    transform: rotate(180deg);
+}
+
+.login-register-dropdown.active {
+    border: 1px solid var(--dark-blue);
+    z-index: 2;
+}
+
+.login-register-select i {
+    color: var(--dark-blue);
+}
+
+.login-register-dropdown-menu li:hover {
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+.login-register-form-page {
+    display: none;
+
+}
+
+input.invalid {
+    background-color: var(--invalid);
+    border: 1px solid red;
+}
+
+.drop-down-valid.invalid {
+    background-color: var(--invalid);
+    border: 1px solid red;
+}
+.heading{
+    text-shadow: var(--dark-red) 0 1px 0;
+}
+
+/*Footer Section*/
+.footer-bar::before{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    background-color: var(--white);
+    width: 25%;
+    height:1px;
+}
+.social-icons:hover{
+    background-color: var(--white);
+}
+.social-icons:hover i{
+    color: var(--dark-blue);
+    transition: all linear 0.2s;
+}
+.dash:focus{
+    border:1px solid var(--dark-blue)
+}
+
+

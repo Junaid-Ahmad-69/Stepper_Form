@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="Sierra Service Foundation Admin Panel, Sierra Service Portal Admin Panel, Summer Youth Service Projects Admin Panel, SSP Admin Panel, SSP Portal Admin Panel, Sierra Service Admin Panel">
+    <link rel="shortcut icon" href="/assets/images/fav-icon.png" type="image/x-icon">
+    <title>MySSP | Site Manager</title>
+    <!--Tailwind Link-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css">
+    <link rel="stylesheet" href="site_manager.css">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <!--Font Awesome Link-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<section class="flex justify-between w-full">
+    <!--Group_Manager-->
+    <aside class=" relative">
+        <!--Navbar Start -->
+        <ul class="aside-nav-shadow bg-aside text-white w-2/12 h-screen fixed overflow-hidden top-0 left-0 transition-all linear duration-300">
+            <li class="sticky top-0 left-0 z-10">
+                <div id="nav" class="w-full p-3">
+                    <a href="../../../index.html" class="flex items-center gap-4">
+                        <img src="/assets/images/aside/logo-sierra.png" width="60" height="60" alt="logo"/>
+                        <span class="text-2xl">Sierra Service</span>
+                    </a>
+                </div>
+            </li>
+            <li class="menu-item menu-links relative ">
+                <a href="../../../index.html" class="flex items-center gap-6 py-4 px-8 my-2">
+                    <i class="fa-solid fa-house-user text-xl"></i>
+                    <span class="text-lg">Home</span>
+                </a>
+            </li>
+            <li class="menu-item menu-links relative">
+                <a href="../Group_Manager/GroupManager.html" class="flex items-center gap-6 py-4 px-8 my-2">
+                    <i class="fa-solid fa-users-between-lines text-xl"></i>
+                    <span class="text-lg"> Group Manager </span>
+                </a>
+            </li>
+            <li class="menu-item active-menu-links relative">
+                <a href="../Site_Manager/SiteManager.html" class="flex items-center gap-6 py-4 px-8 my-2">
+                    <i class="fa-solid fa-user-shield text-xl"></i>
+                    <span class="text-lg"> Site Manager</span>
+                </a>
+            </li>
+            <li class="menu-item menu-links relative">
+                <a href="../Administration/Administration.html" class="flex items-center gap-6 py-4 px-8 my-2">
+                    <i class="fa-brands fa-accessible-icon text-xl"></i>
+                    <span class="text-lg"> Administration</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!--Main Section-->
+    <main class="main h-screen w-5/6 overflow-y-hidden">
+        <div class="nav-shadow">
+            <div class="flex items-center justify-between px-4 py-3">
+                <div>
+                    <h2 class="text-base active">Information Center</h2>
+                </div>
+                <div>
+                    <a href="../SignIn/SignIn.html">
+                        <button class="px-2 py-1  text-white button-light">Log Out</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</section>
+
+<script src="./aside.js"></script>
+</body>
+</html>
